@@ -113,5 +113,36 @@ namespace Web_API.Controllers
                 return StatusCode(500, new ResponseResult { Result = ResponseStatus.Error, Message = ex.Message });
             }
         }
+
+        [HttpGet]
+        [Route("GetMissionThemeList")]
+        public async Task<ActionResult<ResponseResult>> GetMissionThemeList()
+        {
+            try
+            {
+                var result = await _balMission.GetMissionThemeListAsync();
+                return Ok(new ResponseResult { Data = result, Result = ResponseStatus.Success });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ResponseResult { Result = ResponseStatus.Error, Message = ex.Message });
+            }
+        }
+
+
+        [HttpGet]
+        [Route("MissionApplicationList")]
+        public async Task<ActionResult<ResponseResult>> GetMissionAppicationList()
+        {
+            try
+            {
+                var result = await _balMission.GetMissionApplicationListAsync();
+                return Ok(new ResponseResult { Data = result, Result = ResponseStatus.Success });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ResponseResult { Result = ResponseStatus.Error, Message = ex.Message });
+            }
+        }
     }
 }

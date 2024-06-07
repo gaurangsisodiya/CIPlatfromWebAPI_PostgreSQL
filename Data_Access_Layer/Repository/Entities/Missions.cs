@@ -7,6 +7,19 @@ using System.Threading.Tasks;
 
 namespace Data_Access_Layer.Repository.Entities
 {
+
+    public class MissionApplication
+    {
+        public int Id { get; set; }
+        public string MissionTitle { get; set; }
+        public int MissionId { get; set; }
+        public int UserId { get; set; }
+        public string UserName { get; set; }
+        public DateTime? AppliedDate { get; set; }
+        public int Sheet { get; set; }
+        public String Status { get; set; }
+  
+    }
     public class Missions
     {
         public int Id { get; set; }

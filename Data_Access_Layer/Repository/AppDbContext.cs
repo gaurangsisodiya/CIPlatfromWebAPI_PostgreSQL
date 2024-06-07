@@ -17,5 +17,6 @@ namespace Data_Access_Layer.Repository
         public DbSet<City> City { get; set; }
         public DbSet<Missions> Missions { get; set; }
         public DbSet<MissionSkill> MissionSkill { get; set; }
+        public DbSet<MissionTheme> MissionTheme { get; set; }
     }
 }
